@@ -53,6 +53,11 @@
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjrt</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.module</groupId>
+            <artifactId>jackson-module-jaxb-annotations</artifactId>
+            <version>2.8.5</version>
+        </dependency>
         <!-- SpringMVC End -->
     </dependencies>
 

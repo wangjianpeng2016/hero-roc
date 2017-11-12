@@ -28,22 +28,23 @@ public class GlobalEventInterceptor implements HandlerInterceptor {
 
         BufferedReader bufferedReader = null;
         StringBuilder param = new StringBuilder("请求参数");
-        try {
+        /*try {
             bufferedReader = request.getReader();
             String readLine = null;
+
             while ((readLine=bufferedReader.readLine())!=null){
                 param.append(readLine);
             }
-
         } catch (Exception e){
             e.printStackTrace();
         } finally {
             if(bufferedReader != null){
                 bufferedReader.close();
             }
-        }
+        }*/
 
-        return true;
+        logger.debug(param.toString());
+        return Boolean.TRUE;
     }
 
     @Override

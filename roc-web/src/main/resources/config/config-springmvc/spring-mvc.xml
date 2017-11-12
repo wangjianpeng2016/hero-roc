@@ -43,6 +43,12 @@
 		</mvc:message-converters>
 	</mvc:annotation-driven>
 
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/**"/>
+			<ref bean="globalEventInterceptor"></ref>
+		</mvc:interceptor>
+	</mvc:interceptors>
 
 	<!-- 定义视图文件解析 -->
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
