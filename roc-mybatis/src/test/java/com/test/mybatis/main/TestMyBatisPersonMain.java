@@ -106,4 +106,17 @@ public class TestMyBatisPersonMain {
 
         logger.info("执行结束了...");
     }
+
+    /**
+     * @Description 基于外键的一对一关联查询
+     * @author wangjp
+     * @Date: 2017-11-12 10:37
+     */
+    @Test
+    public void l2l(){
+
+        List<MybatisPerson> persons = myBatisPersonMapper.queryPersonAndProfile();
+
+        logger.info("执行结束了...");
+    }
 }

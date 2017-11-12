@@ -4,6 +4,7 @@ import com.iframe.base.entity.IdEntity;
 
 import javax.persistence.Column;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 @Table(name="mybatis_person")
 public class MybatisPerson extends IdEntity {
@@ -13,6 +14,9 @@ public class MybatisPerson extends IdEntity {
 
     @Column(name="age_")
     private int age;
+
+    @Transient //不使用JPA映射关系
+    private MyBatisPersonalProfile personalProfile;
 
     public MybatisPerson() {
     }
@@ -36,5 +40,13 @@ public class MybatisPerson extends IdEntity {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public MyBatisPersonalProfile getPersonalProfile() {
+        return personalProfile;
+    }
+
+    public void setPersonalProfile(MyBatisPersonalProfile personalProfile) {
+        this.personalProfile = personalProfile;
     }
 }
