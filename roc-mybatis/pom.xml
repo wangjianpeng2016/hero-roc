@@ -21,6 +21,13 @@
 
     <dependencies>
 
+        <!-- MySQL Start -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+        <!-- MySQL End -->
+
         <!-- Spring Start -->
         <dependency>
             <groupId>org.springframework</groupId>
