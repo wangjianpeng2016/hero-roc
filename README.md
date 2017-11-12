@@ -20,7 +20,19 @@ Spring Framework | 容器 | [http://projects.spring.io/spring-framework/](http:/
 SpringMVC | MVC框架 | [http://docs.spring.io/spring/docs/current/spring-framework-reference/htmlsingle/#mvc](http://docs.spring.io/spring/docs/current/spring-framework-reference/htmlsingle/#mvc)
 MyBatis | ORM框架 | [http://www.mybatis.org/mybatis-3/zh/index.html](http://www.mybatis.org/mybatis-3/zh/index.html)
 PageHelper | MyBatis物理分页插件 | [http://git.oschina.net/free/Mybatis_PageHelper](http://git.oschina.net/free/Mybatis_PageHelper)
+Druid | 数据库连接池 | [https://github.com/alibaba/druid](https://github.com/alibaba/druid)
 
 ### 前端技术
+//TODO
 
-## 环境搭建
+## 环境搭建 
+### 开发工具
+* 推荐使用 **Intellij IDEA**
+
+### 开发环境
+* JDK 1.7+
+
+### 资源下载
+// TODO
+
+
