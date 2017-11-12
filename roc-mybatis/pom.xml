@@ -21,6 +21,12 @@
 
     <dependencies>
 
+        <dependency>
+            <groupId>com.iframe.hero</groupId>
+            <artifactId>roc-common</artifactId>
+            <version>1.0.1-SNAPSHOT</version>
+        </dependency>
+
         <!-- MySQL Start -->
         <dependency>
             <groupId>mysql</groupId>
