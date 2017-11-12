@@ -8,6 +8,11 @@
         <result column="name_" property="name" jdbcType="VARCHAR" />
         <result column="age_" property="age" jdbcType="INTEGER" />
 
+        <association property="personalProfile" column="profile_id" javaType="MyBatisPersonalProfile">
+            <id property="id" column="profile_id" jdbcType="INTEGER"/>
+            <result property="phoneNum" column="phone_num" jdbcType="INTEGER"/>
+            <result property="address" column="address_" jdbcType="VARCHAR"/>
+        </association>
 
 
     </resultMap>

@@ -2,10 +2,12 @@ package com.test.mybatis.main;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import com.iframe.base.help.RowBoundHelper;
 import com.iframe.common.util.LetterUtils;
 import com.test.mybatis.entity.MybatisPerson;
 import com.test.mybatis.mapper.MyBatisPersonMapper;
 import com.test.mybatis.service.MyBatisPersonService;
+import org.apache.ibatis.session.RowBounds;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -116,6 +118,45 @@ public class TestMyBatisPersonMain {
     public void l2l(){
 
         List<MybatisPerson> persons = myBatisPersonMapper.queryPersonAndProfile();
+
+        logger.info("执行结束了...");
+    }
+
+    /**
+     * @Description 分页查询(RowBounds 篇)
+     * @author wangjp
+     * @Date: 2017-11-12 10:55
+     */
+    @Test
+    public void queryPersonAndProfilePage(){
+
+        //pageNum: 当前页，第一页是1
+        //pageSize: 每页显示的行数:
+        int pageNum = 1;
+        int pageSize = 5;
+
+        RowBounds rowBounds = RowBoundHelper.newRowBounds(pageNum, pageSize);
+
+        List<MybatisPerson> persons = myBatisPersonMapper.queryPersonAndProfilePage(rowBounds);
+
+        logger.info("执行结束了...");
+    }
+
+    /**
+     * @Description 分页带参数
+     * @author wangjp
+     * @Date: 2017-11-12 11:06
+     */
+    @Test
+    public void queryqueryPersonAndProfilePageAndParam(){
+        Long phoneNum = 18600000015l;
+        MybatisPerson person = new MybatisPerson();
+        person.setAge(20);
+
+        RowBounds rowBounds = RowBoundHelper.newRowBounds(1, 5);
+
+        List<MybatisPerson> persons = myBatisPersonMapper
+                        .queryqueryPersonAndProfilePageAndParam(phoneNum, person, rowBounds);
 
         logger.info("执行结束了...");
     }
