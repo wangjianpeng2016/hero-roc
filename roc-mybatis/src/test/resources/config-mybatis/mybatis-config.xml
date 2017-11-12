@@ -45,6 +45,6 @@
             <property name="supportMethodsArguments" value="true"/>
         </plugin>  
         
-        <plugin interceptor="com.test.mybatis.interceptor.MapperInterceptor" />
+        <plugin interceptor="com.iframe.base.interceptor.MapperInterceptor" />
     </plugins>  
 </configuration>

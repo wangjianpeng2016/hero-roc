@@ -1,0 +1,25 @@
+#Created by JInto - www.guh-software.de
+#Mon Feb 27 14:15:14 CST 2017
+jdbc.driverClass=com.mysql.jdbc.Driver
+jdbc.filters=stat
+jdbc.initialSize=3
+jdbc.jdbc.pool.init=3
+jdbc.jdbc.pool.minIdle=0
+jdbc.logAbandoned=true
+jdbc.maxOpenPreparedStatements=200
+jdbc.maxWait=60000
+jdbc.minEvictableIdleTimeMillis=25200000
+jdbc.minIdle=0
+jdbc.pool.maxActive=20
+jdbc.poolPreparedStatements=true
+jdbc.removeAbandoned=true
+jdbc.removeAbandonedTimeout=1800
+jdbc.testOnBorrow=false
+jdbc.testOnReturn=false
+jdbc.testSql=SELECT 'x' FROM DUAL
+jdbc.testWhileIdle=true
+jdbc.timeBetweenEvictionRunsMillis=60000
+jdbc.url=
+jdbc.username=
+jdbc.password=
+jdcb.maxActive=20
