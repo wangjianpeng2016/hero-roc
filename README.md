@@ -5,8 +5,8 @@ Hero鹏——学习分享,把自己学到的知识进行总结，文章中如有
 1. [用户手册](http://www.crazyboy2016.com/hero-share/roc-guide/), 您可以查看更多的文档说明。
 
 ## 组织结构
-hero-roc
 ```
+hero-roc
 ├── roc-common -- 公共模块
 ├── roc-mybatis -- MyBatis 框架的使用案例
 ├── roc-web -- SpringMVC Web工程案例
@@ -14,6 +14,10 @@ hero-roc
 
 ## 技术选型
 ### 后端技术:
+技术 | 名称 | 官网
+---|--- | ---
+row 1 col 1 | row 1 col 2 |2
+row 2 col 1 | row 2 col 2 |3
 
 ### 前端技术
 
