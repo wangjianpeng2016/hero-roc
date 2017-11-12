@@ -33,4 +33,8 @@ public class TestMyBatisPersonMain {
 
         System.out.println();
     }
+
+    public void savePerson(){
+
+    }
 }

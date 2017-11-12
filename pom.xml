@@ -9,6 +9,7 @@
     <version>1.0.1-SNAPSHOT</version>
     <modules>
         <module>roc-mybatis</module>
+        <module>roc-common</module>
     </modules>
     <packaging>pom</packaging>
     <name>hero-roc</name>
