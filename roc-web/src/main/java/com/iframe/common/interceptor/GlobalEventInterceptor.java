@@ -43,7 +43,7 @@ public class GlobalEventInterceptor implements HandlerInterceptor {
             }
         }
 
-        return Boolean.TRUE;
+        return true;
     }
 
     @Override
