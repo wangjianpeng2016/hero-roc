@@ -10,6 +10,7 @@
     <modules>
         <module>roc-mybatis</module>
         <module>roc-common</module>
+        <module>roc-web</module>
     </modules>
     <packaging>pom</packaging>
     <name>hero-roc</name>
