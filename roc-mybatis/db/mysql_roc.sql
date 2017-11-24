@@ -1,17 +1,10 @@
 /*
- Navicat Premium Data Transfer
-
- Source Server         : 115.28.158.223-exercise
- Source Server Type    : MySQL
- Source Server Version : 50637
- Source Host           : 115.28.158.223
  Source Database       : mysql_roc
 
  Target Server Type    : MySQL
  Target Server Version : 50637
  File Encoding         : utf-8
 
- Date: 11/24/2017 20:45:37 PM
 */
 
 SET NAMES utf8mb4;
