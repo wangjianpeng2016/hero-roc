@@ -11,7 +11,32 @@
     <name>roc-web</name>
     <url>http://maven.apache.org</url>
 
+    <properties>
+        <swagger2.version>2.4.0</swagger2.version>
+    </properties>
+
     <dependencies>
+
+        <!-- Swagger Start -->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>${swagger2.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>${swagger2.version}</version>
+        </dependency>
+        <!-- Swagger End -->
+
+        <!-- FastDFS Start -->
+        <dependency>
+            <groupId>com.iframe.3rd-party</groupId>
+            <artifactId>fastdfs_client</artifactId>
+            <version>1.20</version>
+        </dependency>
+        <!-- FastDFS End -->
 
         <!-- LogBack Start-->
         <dependency>

@@ -1,6 +1,8 @@
 package com.iframe.business.controller;
 
 import com.iframe.business.entity.UserInfo;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -18,6 +20,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @Date: 2017-11-12 13:01
  */
 @Controller
+@Api(value="loginController",description="登陆控制器")
 @RequestMapping("/loginController")
 public class LoginController {
 
@@ -29,6 +32,7 @@ public class LoginController {
      * @Date: 2017-11-12 13:02
      */
     @ResponseBody
+    @ApiOperation(value="登陆接口的描述", httpMethod="POST", produces= MediaType.APPLICATION_JSON_VALUE)
     @RequestMapping(value="/login", method= RequestMethod.POST, produces= MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<UserInfo> login(@RequestBody UserInfo userInfo){
 
