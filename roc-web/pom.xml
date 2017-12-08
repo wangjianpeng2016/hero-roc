@@ -30,14 +30,6 @@
         </dependency>
         <!-- Swagger End -->
 
-        <!-- FastDFS Start -->
-        <dependency>
-            <groupId>com.iframe.3rd-party</groupId>
-            <artifactId>fastdfs_client</artifactId>
-            <version>1.20</version>
-        </dependency>
-        <!-- FastDFS End -->
-
         <!-- LogBack Start-->
         <dependency>
             <groupId>org.slf4j</groupId>
