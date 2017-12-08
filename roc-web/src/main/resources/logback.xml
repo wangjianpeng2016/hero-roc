@@ -25,7 +25,7 @@
         </filter>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <fileNamePattern>
-                ${logPath}/%d{yyyy-MM-dd}/${logFileName}.log
+                ${logPath}/%d{yyyy-MM-dd}/${logFileName}_error.log
             </fileNamePattern>
             <maxHistory>${maxHistory}</maxHistory>
         </rollingPolicy>
@@ -35,24 +35,6 @@
             </pattern>
         </encoder>
     </appender>
-
-
-    <!-- WARN级别日志 appender -->
-    <appender name="WARN" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <filter class="ch.qos.logback.classic.filter.LevelFilter">
-            <level>WARN</level>
-            <onMatch>ACCEPT</onMatch>
-            <onMismatch>DENY</onMismatch>
-        </filter>
-        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${logPath}/%d{yyyy-MM-dd}/${logFileName}.log</fileNamePattern>
-            <maxHistory>${maxHistory}</maxHistory>
-        </rollingPolicy>
-        <encoder>
-            <pattern>[%level] %d{yyyy-MM-dd HH:mm:ss} %logger - %msg%n</pattern>
-        </encoder>
-    </appender>
-
 
     <!-- INFO级别日志 appender -->
     <appender name="INFO" class="ch.qos.logback.core.rolling.RollingFileAppender">
@@ -66,10 +48,9 @@
             <maxHistory>${maxHistory}</maxHistory>
         </rollingPolicy>
         <encoder>
-            <pattern>[%level] %d{yyyy-MM-dd HH:mm:ss} %logger - %msg%n</pattern>
+            <pattern>[%p][%d{yyyy-MM-dd HH:mm:ss}][%c][%M][%L] [->] %m%n</pattern>
         </encoder>
     </appender>
-
 
     <!-- DEBUG级别日志 appender -->
     <appender name="DEBUG" class="ch.qos.logback.core.rolling.RollingFileAppender">
@@ -87,24 +68,7 @@
         </encoder>
     </appender>
 
-
-    <!-- TRACE级别日志 appender -->
-    <appender name="TRACE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <filter class="ch.qos.logback.classic.filter.LevelFilter">
-            <level>TRACE</level>
-            <onMatch>ACCEPT</onMatch>
-            <onMismatch>DENY</onMismatch>
-        </filter>
-        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${logPath}/%d{yyyy-MM-dd}/${logFileName}.log</fileNamePattern>
-            <maxHistory>${maxHistory}</maxHistory>
-        </rollingPolicy>
-        <encoder>
-            <pattern>[%level] %d{yyyy-MM-dd HH:mm:ss} %logger - %msg%n</pattern>
-        </encoder>
-    </appender>
-
-    <appender name="customAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <appender name="watchSQL" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <filter class="ch.qos.logback.classic.filter.LevelFilter">
             <level>DEBUG</level>
             <onMatch>ACCEPT</onMatch>
@@ -119,7 +83,26 @@
         </encoder>
     </appender>
 
-    <root>
+    <appender name="DruidAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>INFO</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${logPath}/%d{yyyy-MM-dd}/${logFileName}.log</fileNamePattern>
+            <MaxHistory>90</MaxHistory>
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>
+                <pattern>[%p][%d{yyyy-MM-dd HH:mm:ss}][%c][%M][%L] [->] %m%n</pattern>
+            </pattern>
+        </encoder>
+    </appender>
+
+    <root >
+
+        <!-- 打印debug级别日志及以上级别日志 -->
         <level value="${logLevel}" />
 
         <!-- 控制台输出 -->
@@ -127,15 +110,9 @@
 
         <!-- 文件输出 -->
         <appender-ref ref="ERROR" />
-        <appender-ref ref="INFO" />
-        <appender-ref ref="WARN" />
         <appender-ref ref="DEBUG" />
+        <appender-ref ref="INFO" />
 
     </root>
-
-
-
-
-
 
 </configuration>
